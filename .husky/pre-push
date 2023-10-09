@@ -5,9 +5,9 @@
 echo "*********************************"
 echo "HUSKY: Running pre-push checks..."
 
-# CHECK 1: Does branch name start with 'BUG_' or 'ENH_'
+# CHECK 1: Does branch name start with 'feature/BUG_' or 'feature/ENH_'
 branch_name=$(git symbolic-ref --short HEAD)
-if ! echo "$branch_name" | grep -qE '^(BUG_|ENH_).*'; then
+if ! echo "$branch_name" | grep -qE '^(feature/BUG_|feature/ENH_).*'; then
   echo "- Error: Invalid branch name."
   echo "Branch name must start with 'BUG_' or 'ENH_'."
   exit 1
