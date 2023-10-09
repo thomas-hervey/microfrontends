@@ -125,58 +125,6 @@ importers:
         specifier: ^0.5.3
         version: 0.5.3
       clsx:
-        specifier: ^2.0.0
-        version: 2.0.0
-      next:
-        specifier: '*'
-        version: 13.5.4(@babel/core@7.23.0)(react-dom@18.2.0)(react@18.2.0)
-      react:
-        specifier: ^17.0.0 || ^18.0.0-0
-        version: 18.2.0
-      react-dom:
-        specifier: ^17.0.0 || ^18.0.0-0
-        version: 18.2.0(react@18.2.0)
-    devDependencies:
-      '@storybook/react':
-        specifier: ^7.4.6
-        version: 7.4.6(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)
-      '@swc/cli':
-        specifier: ^0.1.62
-        version: 0.1.62(@swc/core@1.3.92)(chokidar@3.5.3)
-      '@swc/core':
-        specifier: ^1.3.92
-        version: 1.3.92(@swc/helpers@0.5.3)
-      '@types/react':
-        specifier: ^18.2.25
-        version: 18.2.25
-      chokidar:
-        specifier: ^3.5.3
-        version: 3.5.3
-      eslint:
-        specifier: ^8.51.0
-        version: 8.51.0
-      eslint-config-acme:
-        specifier: workspace:*
-        version: link:../eslint-config-acme
-      typescript:
-        specifier: 5.2.2
-        version: 5.2.2
-
-  packages/acme-pages:
-    dependencies:
-      '@acme/design-system':
-        specifier: workspace:*
-        version: link:../acme-design-system
-      '@acme/utils':
-        specifier: workspace:*
-        version: link:../acme-utils
-      '@swc/helpers':
-        specifier: ^0.5.1
-        version: 0.5.3
-      '@vercel/examples-ui':
-        specifier: ^1.0.5
-        version: 1.0.5(next@13.5.4)(react-dom@18.2.0)(react@18.2.0)
-      clsx:
         specifier: ^1.2.1
         version: 1.2.1
       next:
@@ -189,6 +137,9 @@ importers:
         specifier: ^17.0.0 || ^18.0.0-0
         version: 18.2.0(react@18.2.0)
     devDependencies:
+      '@storybook/react':
+        specifier: ^7.0.6
+        version: 7.4.6(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.4)
       '@swc/cli':
         specifier: ^0.1.62
         version: 0.1.62(@swc/core@1.3.92)(chokidar@3.5.3)
@@ -208,8 +159,57 @@ importers:
         specifier: workspace:*
         version: link:../eslint-config-acme
       typescript:
-        specifier: ^5.0.4
-        version: 5.1.3
+        specifier: 5.0.4
+        version: 5.0.4
+
+  packages/acme-pages:
+    dependencies:
+      '@acme/design-system':
+        specifier: workspace:*
+        version: link:../acme-design-system
+      '@acme/utils':
+        specifier: workspace:*
+        version: link:../acme-utils
+      '@swc/helpers':
+        specifier: ^0.5.3
+        version: 0.5.3
+      '@vercel/examples-ui':
+        specifier: ^2.0.3
+        version: 2.0.3(next@13.5.4)(react-dom@18.2.0)(react@18.2.0)
+      clsx:
+        specifier: ^2.0.0
+        version: 2.0.0
+      next:
+        specifier: '*'
+        version: 13.5.4(@babel/core@7.23.0)(react-dom@18.2.0)(react@18.2.0)
+      react:
+        specifier: ^17.0.0 || ^18.0.0-0
+        version: 18.2.0
+      react-dom:
+        specifier: ^17.0.0 || ^18.0.0-0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@swc/cli':
+        specifier: ^0.1.62
+        version: 0.1.62(@swc/core@1.3.92)(chokidar@3.5.3)
+      '@swc/core':
+        specifier: ^1.3.92
+        version: 1.3.92(@swc/helpers@0.5.3)
+      '@types/react':
+        specifier: ^18.2.25
+        version: 18.2.25
+      chokidar:
+        specifier: ^3.5.3
+        version: 3.5.3
+      eslint:
+        specifier: ^8.51.0
+        version: 8.51.0
+      eslint-config-acme:
+        specifier: workspace:*
+        version: link:../eslint-config-acme
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
 
   packages/acme-storybook:
     dependencies:
@@ -3994,6 +3994,46 @@ packages:
       - vite-plugin-glimmerx
     dev: true
 
+  /@storybook/react@7.4.6(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.4):
+    resolution: {integrity: sha512-w0dVo64baFFPTGpUOWFqkKsu6pQincoymegSNgqaBd5DxEyMDRiRoTWSJHMKE9BwgE8SyWhRkP1ak1mkccSOhQ==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      '@storybook/client-logger': 7.4.6
+      '@storybook/core-client': 7.4.6
+      '@storybook/docs-tools': 7.4.6
+      '@storybook/global': 5.0.0
+      '@storybook/preview-api': 7.4.6
+      '@storybook/react-dom-shim': 7.4.6(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/types': 7.4.6
+      '@types/escodegen': 0.0.6
+      '@types/estree': 0.0.51
+      '@types/node': 16.18.58
+      acorn: 7.4.1
+      acorn-jsx: 5.3.2(acorn@7.4.1)
+      acorn-walk: 7.2.0
+      escodegen: 2.1.0
+      html-tags: 3.3.1
+      lodash: 4.17.21
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-element-to-jsx-string: 15.0.0(react-dom@18.2.0)(react@18.2.0)
+      ts-dedent: 2.2.0
+      type-fest: 2.19.0
+      typescript: 5.0.4
+      util-deprecate: 1.0.2
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+    dev: true
+
   /@storybook/react@7.4.6(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.3):
     resolution: {integrity: sha512-w0dVo64baFFPTGpUOWFqkKsu6pQincoymegSNgqaBd5DxEyMDRiRoTWSJHMKE9BwgE8SyWhRkP1ak1mkccSOhQ==}
     engines: {node: '>=16.0.0'}
@@ -4028,46 +4068,6 @@ packages:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       typescript: 5.1.3
-      util-deprecate: 1.0.2
-    transitivePeerDependencies:
-      - encoding
-      - supports-color
-    dev: true
-
-  /@storybook/react@7.4.6(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-w0dVo64baFFPTGpUOWFqkKsu6pQincoymegSNgqaBd5DxEyMDRiRoTWSJHMKE9BwgE8SyWhRkP1ak1mkccSOhQ==}
-    engines: {node: '>=16.0.0'}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@storybook/client-logger': 7.4.6
-      '@storybook/core-client': 7.4.6
-      '@storybook/docs-tools': 7.4.6
-      '@storybook/global': 5.0.0
-      '@storybook/preview-api': 7.4.6
-      '@storybook/react-dom-shim': 7.4.6(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/types': 7.4.6
-      '@types/escodegen': 0.0.6
-      '@types/estree': 0.0.51
-      '@types/node': 16.18.58
-      acorn: 7.4.1
-      acorn-jsx: 5.3.2(acorn@7.4.1)
-      acorn-walk: 7.2.0
-      escodegen: 2.1.0
-      html-tags: 3.3.1
-      lodash: 4.17.21
-      prop-types: 15.8.1
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      react-element-to-jsx-string: 15.0.0(react-dom@18.2.0)(react@18.2.0)
-      ts-dedent: 2.2.0
-      type-fest: 2.19.0
-      typescript: 5.2.2
       util-deprecate: 1.0.2
     transitivePeerDependencies:
       - encoding
@@ -4756,6 +4756,20 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       sugar-high: 0.4.7
+    dev: false
+
+  /@vercel/examples-ui@2.0.3(next@13.5.4)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-xqg4KB4HYuY9viei5mRn0NFYUG4ThA0V2v7EEnpPPbv7dyiW/sZKOkVINzRhfE/f67WFdiOjAqCpR7CG6U9Tlg==}
+    peerDependencies:
+      next: '*'
+      react: ^17.0.2 || ^18.0.0-0
+      react-dom: ^17.0.2 || ^18.0.0-0
+    dependencies:
+      '@swc/helpers': 0.5.3
+      clsx: 1.2.1
+      next: 13.5.4(@babel/core@7.23.0)(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /@vitejs/plugin-react@3.1.0(vite@4.4.11):
@@ -12008,6 +12022,12 @@ packages:
     resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
     engines: {node: '>=4.2.0'}
     hasBin: true
+
+  /typescript@5.0.4:
+    resolution: {integrity: sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==}
+    engines: {node: '>=12.20'}
+    hasBin: true
+    dev: true
 
   /typescript@5.1.3:
     resolution: {integrity: sha512-XH627E9vkeqhlZFQuL+UsyAXEnibT0kWR2FWONlr4sTjvxyJYnyefgrkyECLzM5NenmKzRAy2rR/OlYLA1HkZw==}
