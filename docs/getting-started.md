@@ -1,45 +1,47 @@
-Getting Started with Acme Microfrontend App
+Getting Started with Microfrontend App
 ===========================================
 
-Welcome to the Acme Microfrontend application! This guide will help you get started with setting up, developing, and running the application.
+Welcome to the Microfrontend application! This guide will help you get started with setting up, developing, and running the application.
 
 Prerequisites
 -------------
 
 Before you begin, make sure you have the following prerequisites installed on your system:
 
--   [Node.js](https://nodejs.org/): Ensure you have Node.js installed (recommended version 14 or later).
+-   [Node.js](https://nodejs.org/): Ensure you have Node.js installed (recommended version 18 or later). We recommend using `nvm` for managing Node.js versions.
 -   [pnpm](https://pnpm.io/): We use pnpm as our package manager. You can install it globally using npm or yarn: `npm install -g pnpm`.
 
 Clone the Repository
 --------------------
 
-To get started, clone the Acme Microfrontend repository from GitHub:
+To get started, clone the Microfrontend repository from GitHub:
 
-bashCopy code
 
-`git clone https://github.com/thomas-hervey/microfrontends.git
-cd microfrontends`
+```bash
+git clone https://github.com/thomas-hervey/microfrontends.git
+cd microfrontends
+```
 
 Install Dependencies
 --------------------
 
 Navigate to the root of the project and install project dependencies using pnpm:
 
-bashCopy code
-
-`pnpm install`
+`pnpm i`
 
 Development Server
 ------------------
 
-To run the development server, use the following command:
-
-bashCopy code
+This application uses [Turbo Repo](https://turbo.build/repo) to build and run multiple independent apps and packages. To run the development server, run the following command from the project root:
 
 `pnpm dev`
 
-This command will start the development server for the entire application, making your microfrontends available for local development.
+This command will start the development server for the entire application, making your microfrontends available for local development. You can access the following apps at the specified URLs:
+- **Apps**
+  - Main App: [http://localhost:3000](http://localhost:3000)
+  - Docs App: [http://localhost:3001](http://localhost:3001)
+- **Packages**
+  - Storybook: [http://localhost:6006](http://localhost:6006)
 
 Available Scripts
 -----------------
@@ -56,17 +58,17 @@ In the root directory of your project, you can run the following scripts:
 Explore the Apps and Packages
 -----------------------------
 
-The Acme Microfrontend application is organized into apps and packages. Apps are found in the `apps` directory, and packages are found in the `packages` directory. Each app and package may have its own README and documentation.
+The Microfrontend application is organized into apps and packages. Apps are found in the `apps` directory, and packages are found in the `packages` directory. Each app and package may have its own README and documentation.
 
--   Explore the apps in the `apps` directory for individual application documentation.
--   Explore the packages in the `packages` directory for reusable libraries and components.
+-  Each of the `apps` is an independent NextJS application that utilizes one or more packages from `packages`.
+-   Explore the packages in the `packages` directory for reusable libraries and components including a design system, storybook, utils, and application pages.
 
 Contributing
 ------------
 
-We welcome contributions from the community! If you'd like to contribute to the Acme Microfrontend project, please read our [Contributing Guidelines](https://chat.openai.com/c/docs/contributing.md).
+We welcome contributions from the community! If you'd like to contribute to the Microfrontend project, please read our [Contributing Guidelines](https://github.com/thomas-hervey/microfrontends/docs/contributing.md).
 
 License
 -------
 
-This project is licensed under the MIT License. See the [LICENSE](https://chat.openai.com/c/LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/thomas-hervey/microfrontends/LICENSE) file for details.

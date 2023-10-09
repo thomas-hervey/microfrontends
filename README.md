@@ -1,6 +1,70 @@
-## TODO
+# Microfrontends
+Welcome to the Project Name repository! This project follows a set of coding conventions and standards to maintain code consistency and readability. Please review and adhere to the following guidelines when contributing to the project.
+
+## Code Style Guide
+<details>
+  <summary>Expand to see the full style guide</summary>
+
+  ### EditorConfig
+
+  We use an EditorConfig file to maintain consistent coding styles across different editors and IDEs. Make sure your development environment supports EditorConfig. You can find the configuration in the `.editorconfig` file at the project root.
+
+  ### JavaScript (.js) Files
+
+  - Use two spaces for indentation.
+  - Follow the guidelines outlined in the `.eslintrc.js` configuration file for JavaScript linting.
+
+  ### TypeScript (.ts, .tsx) Files
+
+  - Use two spaces for indentation.
+  - Follow the guidelines outlined in the `.eslintrc.js` configuration file for TypeScript linting.
+
+  ### CSS (.css) Files
+
+  - Use two spaces for indentation.
+  - Follow a [BEM (Block Element Modifier)](http://getbem.com/) naming convention for class names.
+  - Maintain a modular and organized approach to styling.
+
+  ### HTML (.html) Files
+
+  - Use two spaces for indentation.
+  - Maintain clean and well-structured HTML code.
+
+  ### Markdown (.md) Files
+
+  - Use two spaces for indentation.
+  - Follow [CommonMark](https://commonmark.org/) for Markdown formatting.
+
+  ## Commit Message Guidelines
+
+  We follow a standardized format for commit messages to ensure clarity and consistency in version control history. Each commit message should adhere to the following format:
+  `<type>(<scope>): <message>`
+
+  - `<type>`: Describes the purpose of the commit. Options include `ENH`, `BUG`, `CHORE`, `DOCS`, `STYLE`, `REFACTOR`).
+  - `<scope>` (optional): Specifies the scope of the commit (e.g., component name, module).
+  - `<message>`: Provides a brief and concise description of the changes.
+
+  Examples:
+
+  - `ENH(auth): add user authentication feature`
+  - `BUG(button): resolve issue with button component`
+  - `DOCS(readme): update installation instructions`
+
+  Please ensure that your commit messages are meaningful and follow this format when contributing to the project.
+
+  ## Automated Checks
+
+  We use automated tools and CI/CD pipelines to perform checks and validations. These checks include code linting, formatting, and testing. Before creating a pull request, make sure to run the following commands locally to ensure your code meets the project's standards:
+
+  - `pnpm lint`: Check for code style and formatting issues.
+  - `pnpm test`: Run tests to ensure code functionality.
+
+</details>
+
+
 
 ---
+## Original README
 name: Microfrontends
 slug: microfrontends
 description: Microfrontends allow teams to work independently of each other by splitting the application into smaller, shareable, and modular components.
