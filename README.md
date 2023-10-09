@@ -3,7 +3,7 @@ Welcome to the Project Name repository! This project follows a set of coding con
 
 ## Code Style Guide
 <details>
-  <summary>Expand to see the full style guide</summary>
+  <summary><b>Expand to see the full style guide</b></summary>
 
   ### EditorConfig
 
@@ -37,18 +37,26 @@ Welcome to the Project Name repository! This project follows a set of coding con
 
   ## Commit Message Guidelines
 
-  We follow a standardized format for commit messages to ensure clarity and consistency in version control history. Each commit message should adhere to the following format:
-  `<type>(<scope>): <message>`
+  We follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) format for commit messages to ensure clarity and consistency in version control history. Each commit message should adhere to the following format:
 
-  - `<type>`: Describes the purpose of the commit. Options include `ENH`, `BUG`, `CHORE`, `DOCS`, `STYLE`, `REFACTOR`).
-  - `<scope>` (optional): Specifies the scope of the commit (e.g., component name, module).
+  - `<type>`: Describes the purpose of the commit. It must be one of the following types:
+    - `feat`: A new feature
+    - `fix`: A bug fix
+    - `chore`: Routine tasks, maintenance, or tooling changes
+    - `docs`: Documentation changes
+    - `style`: Code style, formatting, or styling changes
+    - `refactor`: Code refactorings
+    - `test`: Adding or updating tests
+    - `ci`: Changes to the continuous integration (CI) pipeline configuration
+    - `perf`: Performance improvements
+  - `<scope>` (optional): Specifies the scope of the commit, typically indicating the component, module, or area of the project that was affected.
   - `<message>`: Provides a brief and concise description of the changes.
 
   Examples:
 
-  - `ENH(auth): add user authentication feature`
-  - `BUG(button): resolve issue with button component`
-  - `DOCS(readme): update installation instructions`
+  - `feat(auth)!: add user authentication feature`
+  - `fix(button): resolve issue with button component`
+  - `docs(readme): update installation instructions`
 
   Please ensure that your commit messages are meaningful and follow this format when contributing to the project.
 

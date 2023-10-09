@@ -1,0 +1,13 @@
+# .husky/pre-commit
+
+#!/bin/sh
+
+echo "************************************"
+echo "HUSKY: Running pre-commit checks..."
+
+
+# CHECK 1: Run tests
+npm run test
+
+# Check 2: Lint code
+npm run lint

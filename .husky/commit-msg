@@ -1,0 +1,11 @@
+# .husky/pre-push
+
+#!/bin/sh
+
+echo "*********************************"
+echo "HUSKY: Running commit-msg checks..."
+
+
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx --no-install commitlint --edit
