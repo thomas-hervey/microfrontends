@@ -17,7 +17,7 @@ assignees: thomas-hervey
 
 When submitting a pull request, please follow the contributing guidelines found in [CONTRIBUTING.md](https://github.com/thomas-hervey/microfrontends/docs/CONTRIBUTING.md). For bugs this specifically means:
 
-1. Ensure that your pull request title includes the issue number you are addressing. For example: "BUG(button): #123 Fix button alignment"
+1. Ensure that your pull request title includes the issue number you are addressing. For example: "fix(button): #123 Fix button alignment"
 
 2. In the pull request description or comments, use GitHub's "closing issues" keywords to reference and close this issue upon merge. For example, include `Closes #123` in your description.
 
