@@ -12,6 +12,7 @@
     "build": "build-storybook",
     "preview-storybook": "serve storybook-static",
     "build-storybook": "storybook build",
+    "test-storybook": "test-storybook",
     "lint": "TIMING=1 eslint \".storybook/*.{ts,tsx,js,jsx}\" --fix",
     "clean": "rm -rf .turbo",
     "chromatic": "./scripts/chromatic.sh"
@@ -36,6 +37,7 @@
     "@storybook/preset-typescript": "^3.0.0",
     "@storybook/react": "^7.4.6",
     "@storybook/react-vite": "^7.4.6",
+    "@storybook/test-runner": "^0.13.0",
     "@swc/core": "^1.3.92",
     "autoprefixer": "^10.4.16",
     "chromatic": "^7.3.0",
@@ -43,6 +45,8 @@
     "eslint-config-acme": "workspace:*",
     "eslint-plugin-storybook": "^0.6.15",
     "install": "^0.13.0",
+    "msw": "^1.3.2",
+    "msw-storybook-addon": "^1.9.0",
     "postcss": "^8.4.31",
     "serve": "^14.2.1",
     "storybook": "^7.4.6",
@@ -56,5 +60,8 @@
   },
   "readme": "ERROR: No README data found!",
   "homepage": "https://github.com/vercel/examples#readme",
-  "_id": "@acme/storybook@0.0.1"
+  "_id": "@acme/storybook@0.0.1",
+  "msw": {
+    "workerDirectory": "public"
+  }
 }

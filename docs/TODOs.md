@@ -6,6 +6,7 @@ This document is used to track the TODOs for the project.
 
 ## feature/storybook
 
+- [ ] Complete a full example of storybook tests including composition, interaction, user flow (cypress), and visual audit (chromatic) tests. Follow the steps here: https://storybook.js.org/tutorials/ui-testing-handbook/react/en/introduction/
 - [ ] Fix cypress integration. Start by completing a single running test using the LoginForm.tsx, LoginForm.stories.ts, and LoginForm.cy.ts files. Read more here: https://storybook.js.org/docs/react/writing-tests/stories-in-end-to-end-tests
 - [ ] Get an actual working interaction test. For more see https://storybook.js.org/docs/react/writing-tests/interaction-testing
 - [ ] Run a visual audit test with Chromatic. Does it work?
