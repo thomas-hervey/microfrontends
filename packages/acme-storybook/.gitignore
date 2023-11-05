@@ -5,4 +5,7 @@ storybook-static
 .env
 
 build-storybook.log
+
+chromatic.log
+
 /coverage
