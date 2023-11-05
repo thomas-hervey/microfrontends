@@ -68,6 +68,7 @@ jobs:
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
+          storybookBuildDir: packages/acme-storybook/storybook-static
           # Grab this from the Chromatic manage page
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
 
