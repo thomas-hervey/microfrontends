@@ -3,7 +3,6 @@ import { within, userEvent } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 import Button from './button'
 
-
 const meta: Meta<typeof Button> = {
   title: 'Button',
   component: Button,
