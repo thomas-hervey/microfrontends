@@ -37,10 +37,11 @@ git flow feature start ENH_feature-or-fix-name
 
 2\.  Make your code changes, following the project's coding style and guidelines found in [README.md](https://github.com/thomas-hervey/microfrontends/docs/README.md).
 
-3\.  Commit your changes with a descriptive commit message.
+3\.  Commit your changes with a descriptive commit message. Commits follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) standard using commitlint. It follows the pattern **type(scope?): subject**. You can test your commit with `echo 'fix_WRONG(button): alignment' | commitlint`.
+- "type must be one of [ci, chore, docs, ticket, feat, fix, perf, refactor, revert, style] [type-enum]"
 
 ```bash
-git commit -m "BUG(button): Fix button alignment"
+git commit -m "fix(button): alignment"
 ```
 
 4\.  Push your changes to your GitHub repository.
