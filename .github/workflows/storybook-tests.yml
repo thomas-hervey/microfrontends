@@ -18,17 +18,13 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      # - name: Cache node_modules
-      #   uses: actions/cache@v2
-      #   with:
-      #     path: ~/.pnpm-store
-      #     key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-pnpm-
-
-      - name: Change directory
-        run: 'echo "Working directory: $PWD"'
-        working-directory: ./packages/acme-storybook
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
 
       - name: Install pnpm
         run: npm install -g pnpm
@@ -36,14 +32,14 @@ jobs:
       - name: Install dependencies
         run: pnpm i
 
-      # - name: Install Playwright
-      #   run: npx playwright install --with-deps
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+        working-directory: ./packages/acme-storybook
 
       - name: Build Storybook
         run: pnpm build-storybook --quiet
+        working-directory: ./packages/acme-storybook
 
       - name: Serve Storybook and run tests
-        run: |
-          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
-            "npx http-server storybook-static --port 6006 --silent" \
-            "npx wait-on tcp:6006 && pnpm test-storybook"
+        run: pnpm test # NOTE: This will run the test script which also runs the http server for Storybook
+        working-directory: ./packages/acme-storybook
