@@ -65,6 +65,10 @@ jobs:
         with:
           fetch-depth: 0 # Required to retrieve git history
 
+      - name: Build Storybook
+        run: pnpm build-storybook --quiet
+        working-directory: ./packages/acme-storybook
+
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
