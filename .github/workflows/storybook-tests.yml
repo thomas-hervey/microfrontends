@@ -7,6 +7,7 @@ on:
     # Only run when there are changes to the storybook directory
     paths:
       - 'packages/acme-storybook/**'
+      - 'packages/acme-design-system/**'
 jobs:
   test-storybook:
     timeout-minutes: 60

@@ -16,7 +16,7 @@ const meta: Meta<typeof Button> = {
 }
 
 // NOTE: This is an interaction test
-const hoverButton = () => async ({ canvasElement }) => {
+const interaction_hover = () => async ({ canvasElement }) => {
   const canvas = within(canvasElement)
 
   // find the button
@@ -39,7 +39,7 @@ export const Primary: Story = {
   },
 
   // Hover interaction test
-  play: hoverButton()
+  play: interaction_hover()
 }
 
 export const Secondary: Story = {
@@ -49,7 +49,7 @@ export const Secondary: Story = {
   },
 
   // Hover interaction test
-  play: hoverButton()
+  play: interaction_hover()
 }
 
 
