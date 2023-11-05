@@ -47,3 +47,4 @@ yarn-error.log*
 # Storybook
 storybook-static
 packages/acme-storybook/build-storybook.log
+packages/acme-storybook/coverage
