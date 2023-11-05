@@ -21,8 +21,10 @@
   "dependencies": {
     "@acme/design-system": "workspace:*",
     "@vercel/examples-ui": "^2.0.3",
+    "concurrently": "^8.2.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "wait-on": "^7.1.0"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^7.4.6",
