@@ -32,28 +32,28 @@ jobs:
     - name: Install dependencies
       run: pnpm i
 
-  # # INTERACTION AND ACCESSIBILITY TESTS
-  # interaction-and-accessibility:
-  #   timeout-minutes: 20
-  #   runs-on: ubuntu-latest
-  #   needs: setup
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: actions/setup-node@v3
-  #       with:
-  #         node-version-file: '.nvmrc'
+  # INTERACTION AND ACCESSIBILITY TESTS
+  interaction-and-accessibility:
+    timeout-minutes: 20
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
 
-  #     - name: Install Playwright
-  #       run: npx playwright install --with-deps
-  #       working-directory: ./packages/acme-storybook
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+        working-directory: ./packages/acme-storybook
 
-  #     - name: Build Storybook
-  #       run: pnpm build-storybook --quiet
-  #       working-directory: ./packages/acme-storybook
+      - name: Build Storybook
+        run: pnpm build-storybook --quiet
+        working-directory: ./packages/acme-storybook
 
-  #     - name: Serve Storybook and run tests
-  #       run: pnpm test # NOTE: This will run the test script which also runs the http server for Storybook
-  #       working-directory: ./packages/acme-storybook
+      - name: Serve Storybook and run tests
+        run: pnpm test # NOTE: This will run the test script which also runs the http server for Storybook
+        working-directory: ./packages/acme-storybook
 
   # VISUAL AND COMPOSITION TESTS
   visual-and-composition:
@@ -76,7 +76,7 @@ jobs:
           # Grab this from the Chromatic manage page
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
 
-  # # USER FLOW TESTS (CYPRESS)
+  # #TODO: USER FLOW TESTS (CYPRESS)
   # user-flow:
   #   runs-on: ubuntu-latest
   #   steps:
