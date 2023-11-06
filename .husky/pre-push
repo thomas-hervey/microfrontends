@@ -4,6 +4,7 @@
 
 echo "*********************************"
 echo "HUSKY: Running pre-push checks..."
+echo "*********************************"
 
 # CHECK 1: Does branch name start with 'feature/BUG_' or 'feature/ENH_' or is 'develop' or 'main'?
 branch_name=$(git symbolic-ref --short HEAD)
@@ -15,3 +16,7 @@ fi
 
 # CHECK 2: Make sure tests pass
 npm run test
+
+echo "*********************************"
+echo "HUSKY: Pre-push checks completed!"
+echo "*********************************"

@@ -2,6 +2,7 @@ import path from 'path'
 
 module.exports = {
   stories: [
+    '../Intro.mdx',
     {
       directory: '../../acme-design-system/src/**',
       files: '*.stories.*',
@@ -24,9 +25,9 @@ module.exports = {
     options: {},
   },
   docs: {
-    autodocs: true,
+    autodocs: 'tags',
   },
-  async viteFinal(config, { configType }) {
+  async viteFinal(config: any, { configType }: { configType: string }) {
     // customize the Vite config here
     return config
   },

@@ -2,12 +2,25 @@
 
 #!/bin/sh
 
-echo "************************************"
+echo "***********************************"
 echo "HUSKY: Running pre-commit checks..."
-
+echo "***********************************"
 
 # CHECK 1: Run tests
 npm run test
 
 # Check 2: Lint code
 npm run lint
+
+# Check 3: Run prettier
+npm run format
+
+# Check 4: Check for unstaged changes
+git diff --exit-code
+
+# Check 5: Check for untracked files
+git diff --exit-code --cached
+
+echo "***********************************"
+echo "HUSKY: Pre-commit checks completed!"
+echo "***********************************"

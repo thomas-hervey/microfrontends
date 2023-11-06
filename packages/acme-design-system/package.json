@@ -57,6 +57,8 @@
     "react-dom": "^17.0.0 || ^18.0.0-0"
   },
   "dependencies": {
+    "@storybook/jest": "^0.2.3",
+    "@storybook/testing-library": "^0.2.2",
     "@swc/helpers": "^0.5.3",
     "clsx": "^1.2.1"
   },

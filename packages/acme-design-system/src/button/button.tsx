@@ -21,7 +21,8 @@ const Button: FC<ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>> = ({
     'text-base font-medium outline-none select-none align-middle',
     'whitespace-nowrap leading-10 shadow-md transition-colors',
     secondary ? 'bg-white text-black' : 'bg-black text-white',
-    className
+    className,
+    'hover:bg-gray-100 hover:text-black',
   )
 
   return (

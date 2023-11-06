@@ -1,5 +1,27 @@
 import '@vercel/examples-ui/globals.css'
 
+import { initialize, mswDecorator } from 'msw-storybook-addon';
+
+// Initialize MSW
+initialize();
+
+/** @type { import('@storybook/react').Preview } */
+const preview = {
+  decorators: [mswDecorator],
+  parameters: {
+    actions: { argTypesRegex: '^on[A-Z].*' },
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/,
+      },
+    },
+  },
+};
+
+export default preview;
+
+
 // TODO: Determine if/when we want these preview utilities. They were ported over from my other configuration.
 // import type { Preview } from '@storybook/react'
 
