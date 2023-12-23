@@ -40,7 +40,7 @@ git flow feature start ENH_feature-or-fix-name
 3\.  Commit your changes with a descriptive commit message.
 
 ```bash
-git commit -m "BUG(button): Fix button alignment"
+git commit -m "fix(button): fix button alignment"
 ```
 
 4\.  Push your changes to your GitHub repository.
