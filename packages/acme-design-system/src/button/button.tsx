@@ -8,6 +8,7 @@ export interface ButtonProps {
   secondary?: boolean
 }
 
+
 const Button: FC<ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>> = ({
   children,
   className,
