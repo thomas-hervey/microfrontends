@@ -27,14 +27,14 @@
     "test": "turbo run test"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.26.2",
-    "@commitlint/cli": "^17.7.2",
-    "@commitlint/config-conventional": "^17.7.0",
-    "@types/node": "^20.8.3",
+    "@changesets/cli": "^2.27.1",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "18.4.3",
+    "@types/node": "^20.10.5",
     "husky": "^8.0.3",
-    "prettier": "^3.0.3",
-    "prettier-plugin-tailwindcss": "^0.5.5",
-    "turbo": "^1.10.15"
+    "prettier": "3.1.1",
+    "prettier-plugin-tailwindcss": "^0.5.9",
+    "turbo": "^1.11.2"
   },
   "packageManager": "pnpm@8.8.0"
 }
