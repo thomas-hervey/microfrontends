@@ -50,6 +50,10 @@ jobs:
         run: npx playwright install --with-deps
         working-directory: ./packages/acme-storybook
 
+      - name: Install dependencies
+        run: pnpm install
+        working-directory: ./packages/acme-storybook
+
       - name: Build Storybook
         run: pnpm build-storybook --quiet
         working-directory: ./packages/acme-storybook
@@ -70,6 +74,10 @@ jobs:
 
       - name: Install pnpm
         run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+        working-directory: ./packages/acme-storybook
 
       - name: Build Storybook
         run: pnpm build-storybook --quiet
