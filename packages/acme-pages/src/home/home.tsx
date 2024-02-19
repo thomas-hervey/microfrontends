@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Layout, Page, Text, Code, Link, Snippet } from '@vercel/examples-ui'
-import { Button, Quote } from '@acme/design-system'
-import { matchingTextColor, randomColor } from '@acme/utils'
+import { Button, Quote } from '@repo/acme-design-system'
+import { matchingTextColor, randomColor } from '@repo/acme-utils'
 import Navbar from '../components/navbar'
 
 export default function Home(): React.ReactNode {
@@ -105,7 +105,7 @@ export default function Home(): React.ReactNode {
         outside its domain don&apos;t live reload (<Code>apps/main</Code> lives
         in port 3000, and <Code>apps/docs</Code> in 3001).
       </Text>
-      <Text variant="h2" className="mt-10 my-6">
+      <Text variant="h2" className="my-6 mt-10">
         packages/acme-storybook
       </Text>
       <Text className="mb-4">
@@ -116,7 +116,7 @@ export default function Home(): React.ReactNode {
         </Link>
         .
       </Text>
-      <Text variant="h2" className="mt-10 my-6">
+      <Text variant="h2" className="my-6 mt-10">
         packages/eslint-config-acme
       </Text>
       <Text className="mb-4">
