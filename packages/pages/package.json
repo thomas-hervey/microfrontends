@@ -1,0 +1,71 @@
+{
+  "name": "@repo/pages",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Next.js pages for the @repo design system",
+  "license": "MIT",
+  "author": {
+    "name": "Thomas Hervey",
+    "email": "thomasahervey@gmail.com"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js",
+    "./*": [
+      "./dist/*.js",
+      "./dist/*/index.js"
+    ]
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*",
+        "src/*/index"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && yarn build:swc && yarn types",
+    "build:swc": "swc src -d dist",
+    "clean": "rm -rf ./dist && rm -rf .turbo",
+    "dev": "yarn build:swc -w",
+    "lint": "TIMING=1 eslint \"**/*.{ts,tsx,js,jsx}\" --fix",
+    "types": "tsc --emitDeclarationOnly"
+  },
+  "dependencies": {
+    "@repo/design-system": "*",
+    "@repo/utils": "*",
+    "@swc/helpers": "^0.5.6",
+    "@vercel/examples-ui": "^2.0.3",
+    "clsx": "^2.1.0"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@swc/cli": "^0.3.9",
+    "@swc/core": "^1.4.2",
+    "@types/react": "^18.2.56",
+    "chokidar": "^3.6.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "next": "*",
+    "react": "^17.0.0 || ^18.0.0-0",
+    "react-dom": "^17.0.0 || ^18.0.0-0"
+  },
+  "publishConfig": {
+    "typesVersions": {
+      "*": {
+        "*": [
+          "dist/*.d.ts",
+          "dist/*/index.d.ts"
+        ]
+      }
+    }
+  }
+}

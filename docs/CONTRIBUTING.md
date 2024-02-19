@@ -1,15 +1,12 @@
-Contributing to Microfrontend
-========
+# Contributing to Microfrontend
 
 Thank you for your interest in contributing to the Microfrontend project! We welcome contributions from the community to help improve and grow our microfrontend ecosystem. Whether you want to report a bug, suggest an enhancement, or submit code changes, we appreciate your help.
 
-Code of Conduct
----------------
+## Code of Conduct
 
 Before contributing, please read and adhere to our [Code of Conduct](https://github.com/thomas-hervey/microfrontends/docs/code-of-conduct.md). We expect all contributors to follow these guidelines and create a positive and inclusive environment for everyone.
 
-How to Contribute
----------------
+## How to Contribute
 
 ### Reporting Bugs & Suggesting Enhancements
 
@@ -57,14 +54,10 @@ git push origin feature/BUG_feature-or-fix-name
 
 8\.  Once your PR is approved, it will be merged into the `develop` branch.
 
-Code Review
------------
+## Code Review
 
 All code contributions are reviewed by maintainers and contributors to ensure code quality and adherence to project standards. Be prepared to make revisions based on feedback during code reviews.
 
-License
--------
+## License
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/thomas-hervey/microfrontends/LICENSE) file for details.
-
-Thank you for contributing to Microfrontend! Your efforts help make this project better for everyone.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/thomas-hervey/microfrontends/LICENSE) file for details. Thank you for contributing to Microfrontend! Your efforts help make this project better for everyone.

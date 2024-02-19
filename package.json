@@ -1,40 +1,47 @@
 {
-  "repository": "https://github.com/thomas-hervey/microfrontends",
+  "name": "microfrontends",
+  "version": "0.1.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thomas-hervey/microfrontends"
+  },
+  "license": "MIT",
   "author": {
     "name": "Thomas Hervey",
     "email": "thomasahervey@gmail.com"
   },
-  "version": "0.1.0",
-  "license": "MIT",
-  "private": true,
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
   "scripts": {
     "build": "turbo run build",
-    "build:main": "turbo run build --filter=main...",
     "build:docs": "turbo run build --filter=docs...",
-    "dev": "turbo run dev",
-    "start": "turbo run start",
-    "clean": "turbo run clean && rm -rf node_modules",
-    "lint": "turbo run lint",
-    "format": "prettier --write .",
+    "build:main": "turbo run build --filter=main...",
     "changeset": "changeset",
-    "version-packages": "changeset version",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "dev": "turbo run dev",
+    "format": "prettier --write .",
+    "lint": "turbo run lint",
     "prepare": "husky install",
     "release": "turbo run build --filter=main... && changeset publish",
-    "test": "turbo run test"
+    "start": "turbo run start",
+    "test": "turbo run test",
+    "version-packages": "changeset version"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
-    "@commitlint/cli": "^18.6.0",
-    "@commitlint/config-conventional": "18.4.3",
-    "@types/node": "^20.11.16",
-    "husky": "^8.0.3",
-    "prettier": "3.1.1",
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-conventional": "18.6.2",
+    "@types/node": "^20.11.19",
+    "husky": "9.0.11",
+    "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.11",
-    "turbo": "^1.12.2"
+    "turbo": "^1.12.4"
   },
-  "packageManager": "pnpm@8.8.0"
+  "packageManager": "yarn@1.22.21",
+  "engines": {
+    "node": ">=20"
+  }
 }

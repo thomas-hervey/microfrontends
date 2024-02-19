@@ -1,0 +1,15 @@
+{
+  "name": "@repo/typescript-config",
+  "version": "0.0.1",
+  "private": true,
+  "description": "A shared typescript configuration for @repo",
+  "license": "MIT",
+  "author": {
+    "name": "Thomas Hervey",
+    "email": "thomasahervey@gmail.com"
+  },
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  }
+}
