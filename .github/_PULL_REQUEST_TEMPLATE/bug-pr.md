@@ -10,8 +10,8 @@ assignees: thomas-hervey
 - [ ] This pull request fixes issue # .
 
 ## Steps
-- [ ] Successfully ran the application locally with `pnpm dev`
-- [ ] Successfully ran tests with `pnpm test`
+- [ ] Successfully ran the application locally with `yarn dev`
+- [ ] Successfully ran tests with `yarn test`
 - [ ] Reviewed the contributing guidelines in [CONTRIBUTING.md](https://github.com/thomas-hervey/microfrontends/docs/CONTRIBUTING.md).
 ## PULL REQUEST GUIDELINES
 

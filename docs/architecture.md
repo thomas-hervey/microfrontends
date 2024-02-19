@@ -1,15 +1,12 @@
- Microfrontend Architecture
-===============================
+# Microfrontend Architecture
 
-Overview
---------
+## Overview
 
 The Microfrontend application is a multi-package Next.js-based project that follows the microfrontend architecture pattern. It's designed to be highly modular and allows multiple teams to work independently on different parts of the application.
 
 The application uses [Turbo repo](https://turbo.build/repo), which let's you define the pipeline for building, testing, and deploying a web application with independent apps and packages from a single repository. It's designed to be highly modular and allows multiple teams to work independently on different parts of the application. The application uses a `turbo.json` file to define a build pipeline.
 
-Project Structure
------------------
+## Project Structure
 
 The project is structured into two main directories: `apps` and `packages`.
 
@@ -17,7 +14,7 @@ The project is structured into two main directories: `apps` and `packages`.
 
 The `apps` directory contains individual Next.js applications, each serving a specific purpose or functionality. Each app has its own codebase, routes, and dependencies.
 
-#### Examples of Apps:
+#### Examples of Apps
 
 1. Main App (`main`): This is the main entry point for the application and acts as the container for all microfrontends. It includes the main layout and routing logic.
 
@@ -27,7 +24,7 @@ The `apps` directory contains individual Next.js applications, each serving a sp
 
 The `packages` directory contains shared packages, libraries, and components that can be used across different apps. These packages are designed to be reusable and follow a decoupled architecture.
 
-#### Examples of Packages:
+#### Examples of Packages
 
 1. Design System (`design-system`): This package contains shared UI components, styles, and utilities used consistently across all apps for a cohesive user experience.
 2. Storybook (`storybook`): This package contains a Storybook instance that can be used to develop and test UI components from the design system in isolation.
@@ -35,7 +32,8 @@ The `packages` directory contains shared packages, libraries, and components tha
 4. Pages (`pages`): This package contains shared pages that can be used across different apps.
 5. Eslint Config (`eslint-config`): This package contains a shared ESLint configuration that can be used across different apps and packages.
 
-### `Config Files`
+### Config Files
+
 - `package.json`: The package.json file specifies the metadata and dependencies for the project. It also defines scripts for running various tasks.
 
   <details>
@@ -119,12 +117,14 @@ The `packages` directory contains shared packages, libraries, and components tha
       },
 
       // Specify the package manager to use (PNPM version 8.8.0).
-      "packageManager": "pnpm@8.8.0"
+      "packageManager": "yarn@8.8.0"
     }
     ```
+
 </details>
 
 - `turbo.json`: The turbo.json file defines build and development pipeline tasks in a Turbo-based monorepo, specifying task dependencies and outputs. It adheres to a schema validated against https://turborepo.org/schema.json.
+
   <details>
     <summary><b>Code with comments</b></summary>
 
@@ -188,6 +188,7 @@ The `packages` directory contains shared packages, libraries, and components tha
       }
     }
     ```
+
   </details>
 
 - `tsconfig.json`: The tsconfig.json file specifies the root files and the compiler options required to compile the project. Specifically this project
@@ -241,50 +242,38 @@ The `packages` directory contains shared packages, libraries, and components tha
       "exclude": ["node_modules", "coverage", "cypress"]
     }
     ```
+
   </details>
 
-Communication
--------------
+## Communication
 
 Microfrontends communicate with each other using well-defined APIs, events, or shared data stores. The communication mechanisms can include:
 
 - [TODO] Dependencies: Explain how dependencies are managed between apps and packages.
+- [FUTURE] HTTP APIs: Apps can communicate with each other via RESTful or GraphQL APIs exposed by the server.
+- [FUTURE] Events: Apps can publish and subscribe to events to notify other microfrontends of changes or actions.
+- [FUTURE] Shared Data Stores: Shared data stores like Redux or context can be used to manage and share global state across microfrontends.
 
--  [FUTURE] HTTP APIs: Apps can communicate with each other via RESTful or GraphQL APIs exposed by the server.
-
--  [FUTURE] Events: Apps can publish and subscribe to events to notify other microfrontends of changes or actions.
-
--  [FUTURE] Shared Data Stores: Shared data stores like Redux or context can be used to manage and share global state across microfrontends.
-
-Deployment
-----------
+## Deployment
 
 Each microfrontend can be deployed independently, allowing for continuous integration and continuous delivery (CI/CD). The deployment process can include:
 
 - [FUTURE] Automatic deployment of each app or package when changes are pushed to the respective repositories.
-
 - [FUTURE] Docker containers and orchestration tools like Kubernetes can be used for containerization and scaling.
 
-Benefits
---------
+## Benefits
 
 The microfrontend architecture offers several advantages:
 
--  Team Independence: Different teams can work on separate microfrontends without interfering with each other's codebase.
+- Team Independence: Different teams can work on separate microfrontends without interfering with each other's codebase.
+- Modular Development: Each app or package can be developed, tested, and deployed independently.
+- Scalability: Apps can be scaled horizontally to handle increased traffic or user load.
+- Reusability: Shared packages and components promote code reuse and maintainability.
 
--  Modular Development: Each app or package can be developed, tested, and deployed independently.
-
--  Scalability: Apps can be scaled horizontally to handle increased traffic or user load.
-
--  Reusability: Shared packages and components promote code reuse and maintainability.
-
-Challenges
-----------
+## Challenges
 
 While microfrontends offer many benefits, they also come with challenges:
 
--  Increased Complexity: Managing multiple apps and their interactions can be complex.
-
--  Consistency: Ensuring a consistent user experience across microfrontends can be challenging.
-
--  Performance: Care must be taken to optimize loading times and reduce unnecessary data transfers.
+- Increased Complexity: Managing multiple apps and their interactions can be complex.
+- Consistency: Ensuring a consistent user experience across microfrontends can be challenging.
+- Performance: Care must be taken to optimize loading times and reduce unnecessary data transfers.
