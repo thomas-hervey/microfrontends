@@ -9,7 +9,7 @@ Prerequisites
 Before you begin, make sure you have the following prerequisites installed on your system:
 
 -   [Node.js](https://nodejs.org/): Ensure you have Node.js installed (recommended version 18 or later). We recommend using `nvm` for managing Node.js versions.
--   [pnpm](https://pnpm.io/): We use pnpm as our package manager. You can install it globally using npm or yarn: `npm install -g pnpm`.
+-   [yarn](https://yarnpkg.com/): We use yarn as our package manager. You can install it globally using npm or yarn: `npm install -g yarn`.
 
 Clone the Repository
 --------------------
@@ -25,16 +25,16 @@ cd microfrontends
 Install Dependencies
 --------------------
 
-Navigate to the root of the project and install project dependencies using pnpm:
+Navigate to the root of the project and install project dependencies using yarn:
 
-`pnpm i`
+`yarn install`
 
 Development Server
 ------------------
 
 This application uses [Turbo Repo](https://turbo.build/repo) to build and run multiple independent apps and packages. To run the development server, run the following command from the project root:
 
-`pnpm dev`
+`yarn dev`
 
 This command will start the development server for the entire application, making your microfrontends available for local development. You can access the following apps at the specified URLs:
 - **Apps**
@@ -48,12 +48,12 @@ Available Scripts
 
 In the root directory of your project, you can run the following scripts:
 
--   `pnpm dev`: Start the development server.
--   `pnpm build`: Build the entire application.
--   `pnpm clean`: Clean build artifacts and dependencies.
--   `pnpm lint`: Run linting checks for the project.
--   `pnpm format`: Automatically format your code using Prettier.
--   `pnpm changeset`: Manage versioning and releases using Changesets.
+-   `yarn dev`: Start the development server.
+-   `yarn build`: Build the entire application.
+-   `yarn clean`: Clean build artifacts and dependencies.
+-   `yarn lint`: Run linting checks for the project.
+-   `yarn format`: Automatically format your code using Prettier.
+-   `yarn changeset`: Manage versioning and releases using Changesets.
 
 Explore the Apps and Packages
 -----------------------------

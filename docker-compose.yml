@@ -1,11 +1,11 @@
 version: "3"
 
 services:
-  main:
-    container_name: main
+  template-app:
+    container_name: template-app
     build:
       context: .
-      dockerfile: ./apps/main/Dockerfile
+      dockerfile: ./apps/template-app/Dockerfile
     restart: always
     ports:
       - 3000:3000

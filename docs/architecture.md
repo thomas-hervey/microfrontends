@@ -29,11 +29,11 @@ The `packages` directory contains shared packages, libraries, and components tha
 
 #### Examples of Packages:
 
-1. Design System (`acme-design-system`): This package contains shared UI components, styles, and utilities used consistently across all apps for a cohesive user experience.
-2. Storybook (`acme-storybook`): This package contains a Storybook instance that can be used to develop and test UI components from the design system in isolation.
-3. Utils (`acme-utils`): This package contains utility functions and helper classes that are shared among different parts of the application.
-4. Pages (`acme-pages`): This package contains shared pages that can be used across different apps.
-5. Eslint Config (`eslint-config-acme`): This package contains a shared ESLint configuration that can be used across different apps and packages.
+1. Design System (`design-system`): This package contains shared UI components, styles, and utilities used consistently across all apps for a cohesive user experience.
+2. Storybook (`storybook`): This package contains a Storybook instance that can be used to develop and test UI components from the design system in isolation.
+3. Utils (`utils`): This package contains utility functions and helper classes that are shared among different parts of the application.
+4. Pages (`pages`): This package contains shared pages that can be used across different apps.
+5. Eslint Config (`eslint-config`): This package contains a shared ESLint configuration that can be used across different apps and packages.
 
 ### `Config Files`
 - `package.json`: The package.json file specifies the metadata and dependencies for the project. It also defines scripts for running various tasks.
