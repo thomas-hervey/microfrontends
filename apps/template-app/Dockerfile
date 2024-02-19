@@ -10,9 +10,6 @@ RUN apk update
 # Set working directory
 WORKDIR /app
 RUN yarn global add turbo
-
-COPY tsconfig.json /app/tsconfig.json
-
 COPY . .
 RUN turbo prune template-app --docker
 
@@ -49,7 +46,7 @@ RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 USER nextjs
 
-COPY --from=installer /app/apps/template-app/next.config.js .
+COPY --from=installer /app/apps/template-app/next.config.mjs .
 COPY --from=installer /app/apps/template-app/package.json .
 
 # Automatically leverage output traces to reduce image size

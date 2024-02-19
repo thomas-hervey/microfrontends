@@ -1,5 +1,5 @@
 {
-  "name": "@repo/template-app",
+  "name": "template-app",
   "version": "0.0.1",
   "private": true,
   "description": "A template for creating a new app in the @repo ecosystem.",
@@ -8,7 +8,6 @@
     "name": "Thomas Hervey",
     "email": "thomasahervey@gmail.com"
   },
-  "type": "module",
   "scripts": {
     "build": "next build",
     "clean": "rm -rf .next && rm -rf .turbo",

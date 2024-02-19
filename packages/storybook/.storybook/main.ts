@@ -1,5 +1,3 @@
-import path from 'path'
-
 module.exports = {
   stories: [
     {
@@ -26,7 +24,7 @@ module.exports = {
   docs: {
     autodocs: true,
   },
-  async viteFinal(config, { configType }) {
+  async viteFinal(config: any, { configType }: any) {
     // customize the Vite config here
     return config
   },
