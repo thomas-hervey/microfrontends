@@ -16,6 +16,9 @@
     "start": "next start",
     "test": "playwright test"
   },
+  "jest": {
+    "preset": "@repo/jest-presets/jest/node"
+  },
   "dependencies": {
     "@repo/design-system": "*",
     "@repo/pages": "*",
@@ -30,6 +33,7 @@
   "devDependencies": {
     "@playwright/test": "^1.41.2",
     "@repo/eslint-config": "*",
+    "@repo/jest-presets": "*",
     "@types/node": "^20.11.19",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
