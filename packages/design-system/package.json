@@ -1,19 +1,15 @@
 {
   "name": "@repo/design-system",
   "version": "0.0.1",
-  "repository": "https://github.com/vercel/examples.git",
+  "private": true,
+  "description": "Design system for Repo",
   "license": "MIT",
-  "type": "module",
-  "scripts": {
-    "dev": "yarn build:swc -w",
-    "build": "rm -rf dist && yarn build:swc && yarn types",
-    "build:swc": "yarn copy-tailwind && swc src -d dist",
-    "copy-tailwind": "mkdir -p dist && cp src/tailwind.cjs dist/tailwind.cjs",
-    "types": "tsc --emitDeclarationOnly",
-    "lint": "TIMING=1 eslint \"**/*.{ts,tsx,js,jsx}\" --fix",
-    "clean": "rm -rf ./dist && rm -rf .turbo"
+  "author": {
+    "name": "Thomas Hervey",
+    "email": "thomasahervey@gmail.com"
   },
   "sideEffects": false,
+  "type": "module",
   "exports": {
     ".": "./dist/index.js",
     "./*": [
@@ -24,9 +20,6 @@
       "require": "./dist/tailwind.cjs"
     }
   },
-  "files": [
-    "dist"
-  ],
   "typesVersions": {
     "*": {
       "*": [
@@ -37,6 +30,38 @@
         "dist/tailwind.d.cts"
       ]
     }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && yarn build:swc && yarn types",
+    "build:swc": "yarn copy-tailwind && swc src -d dist",
+    "clean": "rm -rf ./dist && rm -rf .turbo",
+    "copy-tailwind": "mkdir -p dist && cp src/tailwind.cjs dist/tailwind.cjs",
+    "dev": "yarn build:swc -w",
+    "lint": "TIMING=1 eslint \"**/*.{ts,tsx,js,jsx}\" --fix",
+    "types": "tsc --emitDeclarationOnly"
+  },
+  "dependencies": {
+    "@swc/helpers": "^0.5.3",
+    "clsx": "^2.0.0"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@storybook/react": "^7.0.6",
+    "@swc/cli": "^0.1.62",
+    "@swc/core": "^1.3.53",
+    "@types/react": "^18.2.45",
+    "chokidar": "^3.5.3",
+    "eslint": "^8.38.0",
+    "typescript": "5.0.4"
+  },
+  "peerDependencies": {
+    "next": "*",
+    "react": "^17.0.0 || ^18.0.0-0",
+    "react-dom": "^17.0.0 || ^18.0.0-0"
   },
   "publishConfig": {
     "typesVersions": {
@@ -50,25 +75,5 @@
         ]
       }
     }
-  },
-  "peerDependencies": {
-    "next": "*",
-    "react": "^17.0.0 || ^18.0.0-0",
-    "react-dom": "^17.0.0 || ^18.0.0-0"
-  },
-  "dependencies": {
-    "@swc/helpers": "^0.5.3",
-    "clsx": "^2.0.0"
-  },
-  "devDependencies": {
-    "@storybook/react": "^7.0.6",
-    "@swc/cli": "^0.1.62",
-    "@swc/core": "^1.3.53",
-    "@types/react": "^18.2.45",
-    "chokidar": "^3.5.3",
-    "eslint": "^8.38.0",
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
-    "typescript": "5.0.4"
   }
 }

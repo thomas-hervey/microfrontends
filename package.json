@@ -1,30 +1,34 @@
 {
-  "repository": "https://github.com/thomas-hervey/microfrontends",
+  "name": "@repo/microfrontends",
+  "version": "0.1.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thomas-hervey/microfrontends"
+  },
+  "license": "MIT",
   "author": {
     "name": "Thomas Hervey",
     "email": "thomasahervey@gmail.com"
   },
-  "version": "0.1.0",
-  "license": "MIT",
-  "private": true,
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
   "scripts": {
     "build": "turbo run build",
-    "build:main": "turbo run build --filter=main...",
     "build:docs": "turbo run build --filter=docs...",
-    "dev": "turbo run dev",
-    "start": "turbo run start",
-    "clean": "turbo run clean && rm -rf node_modules",
-    "lint": "turbo run lint",
-    "format": "prettier --write .",
+    "build:main": "turbo run build --filter=main...",
     "changeset": "changeset",
-    "version-packages": "changeset version",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "dev": "turbo run dev",
+    "format": "prettier --write .",
+    "lint": "turbo run lint",
     "prepare": "husky install",
     "release": "turbo run build --filter=main... && changeset publish",
-    "test": "turbo run test"
+    "start": "turbo run start",
+    "test": "turbo run test",
+    "version-packages": "changeset version"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
@@ -36,5 +40,8 @@
     "prettier-plugin-tailwindcss": "^0.5.11",
     "turbo": "^1.12.2"
   },
-  "packageManager": "yarn@1.22.21"
+  "packageManager": "yarn@1.22.21",
+  "engines": {
+    "node": ">=20"
+  }
 }

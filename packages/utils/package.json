@@ -1,16 +1,15 @@
 {
   "name": "@repo/utils",
   "version": "0.0.1",
-  "repository": "https://github.com/vercel/examples.git",
+  "private": true,
+  "description": "A collection of utility functions for use in React applications.",
   "license": "MIT",
-  "type": "module",
-  "scripts": {
-    "dev": "yarn build --watch",
-    "build": "tsup src/* --format esm,cjs --dts --external react",
-    "lint": "TIMING=1 eslint \"**/*.{ts,tsx,js,jsx}\" --fix",
-    "clean": "rm -rf dist && rm -rf .turbo"
+  "author": {
+    "name": "Thomas Hervey",
+    "email": "thomasahervey@gmail.com"
   },
   "sideEffects": false,
+  "type": "module",
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -35,6 +34,22 @@
       ]
     }
   },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/* --format esm,cjs --dts --external react",
+    "clean": "rm -rf dist && rm -rf .turbo",
+    "dev": "yarn build --watch",
+    "lint": "TIMING=1 eslint \"**/*.{ts,tsx,js,jsx}\" --fix"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "eslint": "^8.51.0",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
+  },
   "publishConfig": {
     "typesVersions": {
       "*": {
@@ -44,15 +59,5 @@
         ]
       }
     }
-  },
-  "files": [
-    "dist"
-  ],
-  "devDependencies": {
-    "eslint": "^8.51.0",
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
-    "tsup": "^7.2.0",
-    "typescript": "^5.2.2"
   }
 }
