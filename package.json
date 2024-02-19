@@ -28,7 +28,9 @@
     "release": "turbo run build --filter=main... && changeset publish",
     "start": "turbo run start",
     "test": "turbo run test",
-    "version-packages": "changeset version"
+    "version-packages": "changeset version",
+    "container-build": "COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose -f docker-compose.yml build",
+    "container-start": "docker-compose -f docker-compose.yml up"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",

@@ -20,8 +20,8 @@ To build the application, run the following command:
 
 The application is also containerized, so you can build and run the application using **Docker**. To build and run the application using Docker, follow the steps below:
 
-- Build the application with `COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose -f docker-compose.yml build`
-- Start the application with `docker-compose -f docker-compose.yml up`
+- Build the application with `yarn container-build`
+- Start the application with `yarn container-start`
 
 ## Code Style Guide
 
