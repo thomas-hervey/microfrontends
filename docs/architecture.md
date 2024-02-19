@@ -116,7 +116,7 @@ The `packages` directory contains shared packages, libraries, and components tha
         "turbo": "^1.10.15"
       },
 
-      // Specify the package manager to use (PNPM version 8.8.0).
+      // Specify the package manager to use (yarn version 8.8.0).
       "packageManager": "yarn@8.8.0"
     }
     ```
