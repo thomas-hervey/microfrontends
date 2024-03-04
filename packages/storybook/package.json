@@ -27,7 +27,7 @@
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "@storybook/addon-a11y": "^7.6.16",
-    "@storybook/addon-coverage": "^1.0.0",
+    "@storybook/addon-coverage": "^1.0.1",
     "@storybook/addon-docs": "^7.6.16",
     "@storybook/addon-essentials": "^7.6.16",
     "@storybook/addon-interactions": "^7.6.16",
