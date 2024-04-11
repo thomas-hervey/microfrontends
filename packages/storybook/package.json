@@ -28,7 +28,7 @@
     "@repo/typescript-config": "*",
     "@storybook/addon-a11y": "^7.6.16",
     "@storybook/addon-coverage": "^1.0.1",
-    "@storybook/addon-docs": "^7.6.16",
+    "@storybook/addon-docs": "^8.0.1",
     "@storybook/addon-essentials": "^7.6.16",
     "@storybook/addon-interactions": "^7.6.16",
     "@storybook/addon-jest": "^7.6.16",
