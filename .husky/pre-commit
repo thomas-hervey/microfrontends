@@ -4,10 +4,13 @@
 
 echo "************************************"
 echo "HUSKY: Running pre-commit checks..."
-
+echo "************************************"
 
 # CHECK 1: Run tests
 npm run test
 
 # Check 2: Lint code
 npm run lint
+
+# # CHECK 3. Build  code
+# npm run build

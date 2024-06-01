@@ -22,39 +22,6 @@ The application is also containerized, so you can build and run the application 
 
 - Build the application with `yarn container-build`
 - Start the application with `yarn container-start`
-
-## Code Style Guide
-
-### EditorConfig
-
-  We use an EditorConfig file to maintain consistent coding styles across different editors and IDEs. Make sure your development environment supports EditorConfig. You can find the configuration in the `.editorconfig` file at the project root.
-
-### JavaScript (.js) Files
-
-- Use two spaces for indentation.
-- Follow the guidelines outlined in the `.eslintrc.js` configuration file for JavaScript linting.
-
-### TypeScript (.ts, .tsx) Files
-
-- Use two spaces for indentation.
-- Follow the guidelines outlined in the `.eslintrc.js` configuration file for TypeScript linting.
-
-### CSS (.css) Files
-
-- Use two spaces for indentation.
-- Follow a [BEM (Block Element Modifier)](http://getbem.com/) naming convention for class names.
-- Maintain a modular and organized approach to styling.
-
-### HTML (.html) Files
-
-- Use two spaces for indentation.
-- Maintain clean and well-structured HTML code.
-
-### Markdown (.md) Files
-
-- Use two spaces for indentation.
-- Follow [CommonMark](https://commonmark.org/) for Markdown formatting.
-
 ---
 
 ## Commit Message Guidelines
@@ -92,3 +59,22 @@ The application is also containerized, so you can build and run the application 
 </details>
 
 ---
+
+## Code Style Guide
+
+### EditorConfig
+
+  We use an EditorConfig file to maintain consistent coding styles across different editors and IDEs. Make sure your development environment supports EditorConfig. You can find the configuration in the `.editorconfig` file at the project root.
+
+### TS (.ts, .tsx) Files
+
+- TODO: Give style guidance on TS files
+
+### CSS (.css) Files
+
+- Follow a [BEM (Block Element Modifier)](http://getbem.com/) naming convention for class names.
+- Maintain a modular and organized approach to styling.
+
+### Markdown (.md) Files
+
+- Follow [CommonMark](https://commonmark.org/) for Markdown formatting.

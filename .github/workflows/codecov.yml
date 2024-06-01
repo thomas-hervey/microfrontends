@@ -1,10 +1,10 @@
 name: Codecov
 
 on:
-  push:
-jobs:
+  push: # Run on push to any branch
 
-  codecov:
+jobs:
+  codecov: # Job: Codecov
     runs-on: ubuntu-latest
     steps:
       - name: Upload coverage reports to Codecov

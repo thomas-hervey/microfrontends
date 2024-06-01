@@ -2,10 +2,11 @@
 
 #!/bin/sh
 
-echo "*********************************"
+echo "***********************************"
 echo "HUSKY: Running commit-msg checks..."
-
+echo "***********************************"
 
 . "$(dirname -- "$0")/_/husky.sh"
 
+# COMMAND 1: Run commitlint
 npx --no-install commitlint --edit
