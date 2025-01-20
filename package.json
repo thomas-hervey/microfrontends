@@ -39,7 +39,7 @@
     "@types/node": "^20.12.7",
     "husky": "9.0.11",
     "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.13",
+    "prettier-plugin-tailwindcss": "^0.6.10",
     "turbo": "^1.13.2"
   },
   "packageManager": "yarn@1.22.21",
